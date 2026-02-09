@@ -13,6 +13,12 @@ jobs:
     - name: Checkout sources
       uses: actions/checkout@v4
 
+    - name: Print current working directory
+      run: pwd
+        
+    - name: List files to confirm contents
+      run: ls -F  
+
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
@@ -32,6 +38,6 @@ jobs:
       uses: actions/download-artifact@v5
       with:
         name: spring4
-        
+
     - name: Display structure of downloaded files
       run: ls -R
