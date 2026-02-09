@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./spring4-working-dir
 
     steps:
     - name: Checkout sources
@@ -16,7 +19,7 @@ jobs:
     - name: Print current working directory
       run: pwd
         
-    - name: List files to confirm contents
+    - name: List files to confirm contents - before build
       run: ls -F  
 
     - name: Setup Java
@@ -33,6 +36,9 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: List files to confirm contents - after build
+      run: ls -F  
 
     - name: Download arifact
       uses: actions/download-artifact@v5
