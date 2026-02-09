@@ -27,3 +27,11 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Download arifact
+      uses: actions/download-artifact@v5
+      with:
+        name: spring4
+        
+    - name: Display structure of downloaded files
+      run: ls -R
