@@ -49,7 +49,7 @@ jobs:
     - name: Download arifact
       uses: actions/download-artifact@v5
       with:
-        name: spring4
+        name: spring4-artifact
 
     - name: Display structure of downloaded files
       run: ls -R
