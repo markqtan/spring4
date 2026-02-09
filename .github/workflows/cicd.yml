@@ -8,9 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./spring4-working-dir
+#    defaults:
+#      run:
+#        working-directory: ./spring4-working-dir
 
     steps:
     - name: Checkout sources
